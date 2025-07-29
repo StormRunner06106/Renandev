@@ -36,3 +36,15 @@ export const siteConfig = {
     "GitHub portfolio template",
   ],
 };
+
+export const lucasConfig = {
+  name: "Lucas Taylor",
+  role: "Best Collaborator",
+  email: "stormrunner06106@gmail.com",
+  avatar: "/lucas-taylor.jpg",
+  description: "Renan's trusted collaborator and development partner",
+  socials: {
+    github: "https://github.com/StormRunner06106",
+    bluesky: "https://bsky.app/profile/stormrunner06106.bsky.social",
+  },
+};

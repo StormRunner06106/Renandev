@@ -147,6 +147,7 @@ export default function IndexPage() {
               </Link>
             </AnimatedText>
           </div>
+
           <AnimatedText delay={1.2}>
             <Icons.chevronDown className="h-6 w-6 mt-10" />
           </AnimatedText>

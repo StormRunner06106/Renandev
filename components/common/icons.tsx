@@ -100,6 +100,36 @@ export const Icons = {
   laughEmoji: BiLaugh,
   check: Check,
   infoMark: BsInfoCircle,
+  bluesky: (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      width={props.width || 24}
+      height={props.height || 24}
+      {...props}
+    >
+      <g>
+        <path
+          fill="#0072E6"
+          d="M20 23.5c-2.5 3.5-7.5 7.5-11.5 7.5C5.5 31 4 29.5 4 27.5c0-2.5 2.5-4.5 5.5-4.5 2.5 0 5.5 1.5 8.5 4.5z"
+        />
+        <path
+          fill="#0072E6"
+          d="M20 23.5c2.5 3.5 7.5 7.5 11.5 7.5 3 0 4.5-1.5 4.5-3.5 0-2.5-2.5-4.5-5.5-4.5-2.5 0-5.5 1.5-8.5 4.5z"
+        />
+        <path
+          fill="#0072E6"
+          d="M20 21.5c-2.5-3.5-7.5-7.5-11.5-7.5C5.5 14 4 15.5 4 17.5c0 2.5 2.5 4.5 5.5 4.5 2.5 0 5.5-1.5 8.5-4.5z"
+        />
+        <path
+          fill="#0072E6"
+          d="M20 21.5c2.5-3.5 7.5-7.5 11.5-7.5 3 0 4.5 1.5 4.5 3.5 0 2.5-2.5 4.5-5.5 4.5-2.5 0-5.5-1.5-8.5-4.5z"
+        />
+        <circle fill="#fff" cx="20" cy="22" r="2" />
+      </g>
+    </svg>
+  ),
   questionMark: BsQuestionCircle,
   link: HiOutlineLink,
   externalLink: HiOutlineExternalLink,

@@ -1,30 +1,31 @@
+"use client";
+
+import { CollaboratorButton } from "@/components/common/collaborator-button";
+import { CollaboratorCard } from "@/components/common/collaborator-card";
 import { MainNav } from "@/components/common/main-nav";
 import { ModeToggle } from "@/components/common/mode-toggle";
 import { SiteFooter } from "@/components/common/site-footer";
-import { pagesConfig } from "@/config/pages";
 import { routesConfig } from "@/config/routes";
-import { siteConfig } from "@/config/site";
-import { Metadata } from "next";
+import { usePathname } from "next/navigation";
 
 interface MarketingLayoutProps {
   children: React.ReactNode;
 }
 
-export const metadata: Metadata = {
-  title: `${pagesConfig.home.metadata.title} | Modern Next.js Developer Portfolio Template`,
-  description: `${pagesConfig.home.metadata.description} This open-source Next.js portfolio template is customizable to showcase your skills and projects.`,
-  alternates: {
-    canonical: siteConfig.url,
-  },
-};
-
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
+  const pathname = usePathname();
+  const showCollaborator = pathname === "/";
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="container z-50 bg-background">
         <div className="flex h-20 items-center justify-between py-6">
           <MainNav items={routesConfig.mainNav} />
           <nav className="flex items-center gap-5">
+            {/* Mobile Collaborator Button */}
+            <div className="md:hidden">
+              <CollaboratorButton />
+            </div>
             {/* <Link
                             href={"https://github.com/namanbarkiya"}
                             target="_blank"
@@ -42,6 +43,14 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
           </nav>
         </div>
       </header>
+
+      {/* Collaborator Card positioned in top right - Desktop only, shown on specific pages */}
+      {showCollaborator && (
+        <div className="absolute top-24 right-4 z-40 hidden md:block">
+          <CollaboratorCard delay={0.5} />
+        </div>
+      )}
+
       <main className="container flex-1">{children}</main>
       <SiteFooter />
     </div>
