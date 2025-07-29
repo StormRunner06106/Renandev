@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 import { Norican } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
@@ -32,7 +32,7 @@ const navItemVariants = {
     transition: {
       delay: 0.1 * i,
       duration: 0.5,
-      ease: "easeOut",
+      ease: easeOut,
     },
   }),
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { ReactNode } from "react";
 
 interface ClientPageWrapperProps {
@@ -17,7 +17,7 @@ const pageVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: easeInOut,
     },
   },
 };

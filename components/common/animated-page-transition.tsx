@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { Variants, easeInOut, motion } from "framer-motion"; // Import easeInOut
 import { ReactNode } from "react";
 
 interface AnimatedPageTransitionProps {
@@ -17,7 +17,7 @@ const pageVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: easeInOut, // Use the imported easing function
     },
   },
   exit: {
@@ -25,7 +25,7 @@ const pageVariants: Variants = {
     y: -20,
     transition: {
       duration: 0.3,
-      ease: "easeInOut",
+      ease: easeInOut, // Use the imported easing function
     },
   },
 };

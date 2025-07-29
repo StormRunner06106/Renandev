@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 import { ReactNode } from "react";
 
 interface AnimatedSectionProps {
@@ -39,7 +39,7 @@ export const AnimatedSection = ({
         transition: {
           duration: 0.8,
           delay,
-          ease: "easeOut",
+          ease: easeOut,
         },
       }}
       viewport={{ once: true, margin: "-100px" }}
